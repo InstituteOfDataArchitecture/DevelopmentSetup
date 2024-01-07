@@ -1,0 +1,23 @@
+{
+	"name": "ioda.co",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "development",
+	"workspaceFolder": "/workspace",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"mtxr.sqltools",
+				"mtxr.sqltools-driver-pg",
+				"dorzey.vscode-sqlfluff",
+				"ms-toolsai.jupyter",
+				"github.copilot-chat"
+			]
+		},
+		"forwardPorts": [
+			5432
+		]
+	},
+	"postCreateCommand": "zsh .devcontainer/post_create_command.zsh"
+}

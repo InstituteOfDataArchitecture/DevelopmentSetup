@@ -1,0 +1,20 @@
+{
+    "terminal.integrated.defaultProfile.linux": "zsh", // Necessary for Zsh as the default shell
+    "workbench.colorTheme": "Default Dark+", // Set VS Code to a dark theme
+    "editor.formatOnSave": true, // Format code on save
+    "python.defaultInterpreterPath": "/usr/bin/python", // Choose the default Python interpreter
+    "python.analysis.typeCheckingMode": "off", // Disable type checking
+    "jupyter.notebookFileRoot": "${workspaceFolder}", // Choose default Python to use as Jupyter kernel
+    "sqltools.connections": [ // SQLTools configuration
+        {
+            "name": "Ioda.co",
+            "driver": "PostgreSQL",
+            "previewLimit": 100,
+            "server": "localhost",
+            "port": 5432,
+            "database": "ioda",
+            "username": "ioda",
+            "password": "password"
+        }
+    ]
+}

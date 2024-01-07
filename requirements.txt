@@ -1,0 +1,5 @@
+sqlfluff
+faker
+psycopg2-binary
+sqlalchemy
+requests
