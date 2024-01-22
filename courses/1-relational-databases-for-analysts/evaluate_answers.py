@@ -5,7 +5,7 @@ from colorama import Fore, Style, init
 
 init(autoreset=True)
 
-ANSWERS_FILE_PATH = 'answers.md'
+ANSWERS_FILE_PATH = '/workspace/work/1-relational-databases-for-analysts/answers.txt'
 
 def get_correct_answers() -> Dict[str, str]:
     response = requests.get("https://api.instituteofdataarchitecture.com/api/training/1-relational-databases-for-analysts")
@@ -18,7 +18,7 @@ def evaluate_answers() -> None:
     with open(ANSWERS_FILE_PATH, 'r') as file:
         content = file.read()
 
-    pattern = re.compile(r'(\d+\.\d+\.\d+):\s?([^\n]*)')
+    pattern = re.compile(r'(\d+\.\d+\.\d+):\s*((?:(?!\d+\.\d+\.\d+:).)*)', re.DOTALL)
     answers = {match[0]: match[1].strip() for match in pattern.findall(content)}
     passed, failed, skipped = 0, 0, 0
     failed_tests: List[str] = []
