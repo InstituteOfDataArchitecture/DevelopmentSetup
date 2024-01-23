@@ -67,7 +67,9 @@ def print_results(passed: int, failed: int, skipped: int, failed_tests: List[str
         for test in skipped_tests:
             print(Fore.YELLOW + f"- {test}")
 
-    if failed == 0 and skipped == 0:
+    if failed == 0 and skipped == 0 and passed != 0 and passed != total_questions:
+        print(Style.BRIGHT + Fore.BLUE + f"\nSo far everything is correct, keep going 👍")
+    elif failed == 0 and skipped == 0 and passed == total_questions:
         print(Style.BRIGHT + Fore.BLUE + f"\nYou did it, you answered all {total_questions} questions correctly, you are amazing 🎉")
 
     print()
