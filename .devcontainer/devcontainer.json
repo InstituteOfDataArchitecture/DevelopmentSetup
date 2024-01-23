@@ -11,8 +11,7 @@
 				"mtxr.sqltools",
 				"mtxr.sqltools-driver-pg",
 				"dorzey.vscode-sqlfluff",
-				"ms-toolsai.jupyter",
-				"github.copilot-chat"
+				"ms-toolsai.jupyter"
 			]
 		},
 		"forwardPorts": [
