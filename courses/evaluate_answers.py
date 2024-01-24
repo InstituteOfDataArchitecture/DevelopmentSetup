@@ -1,3 +1,14 @@
+"""
+This script processes answers.txt to compare student answers with correct answers.
+
+Usage:
+    python evaluate_answers.py <course_key>
+
+The <course_key> should be one of the following:
+    - 'one'   : for Relational databases for analysts
+    - 'two'   : for Expert SQL for analysts
+    - 'three' : for Dimensional modeling
+"""
 import re
 import sys
 import requests
